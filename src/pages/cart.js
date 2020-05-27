@@ -1,13 +1,16 @@
 import React from 'react'
 
 import Cart from '~/components/Cart'
-import { Container } from '~/utils/styles'
+import SideText from '../components/SideText/SideText.component';
+
+// Styles
+import './cart.styles.scss';
 
 const CartPage = () => (
-  <Container>
-    <h1>Cart</h1>
+  <div className='cart-page'>
+    <SideText content={'Cart'} />
     <Cart />
-  </Container>
+  </div>
 )
 
 export default CartPage

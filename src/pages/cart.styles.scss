@@ -1,0 +1,15 @@
+@import '../common.styles.scss';
+
+.cart-page{
+    padding: 100px 20px;
+    box-sizing: border-box;
+
+    .side-text{
+
+        p{
+            color: $gj-blue;
+            text-align: right;
+            right: 100px;
+        }
+    }
+}

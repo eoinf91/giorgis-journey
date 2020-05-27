@@ -1,0 +1,25 @@
+@import '../../common.styles.scss';
+
+.cart-items-container{
+    width: 75%;
+    margin-left: auto;
+
+    .totals{
+        text-align: right;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .cart-items-container{
+        padding: 0px 50px 0px 0px;
+        box-sizing: border-box;
+    }
+}
+
+@media only screen and (min-width: 1366px){
+    .cart-items-container{
+        width: 1100px;
+        margin: 0px auto;
+        padding: 0px;
+    }
+}

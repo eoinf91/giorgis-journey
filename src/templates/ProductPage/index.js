@@ -1,45 +1,38 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import ShopItemHeader from '../../components/ShopItemHeader/ShopItemHeader.component';
 import SEO from '~/components/seo'
-import ProductForm from '~/components/ProductForm'
-import {
-  Img,
-  Container,
-  TwoColumnGrid,
-  GridLeft,
-  GridRight,
-} from '~/utils/styles'
-import {
-  ProductTitle,
-  ProductDescription
-} from './styles'
+
+// Styles
+import './shop-item.styles.scss';
 
 const ProductPage = ({ data }) => {
   const product = data.shopifyProduct
   return (
     <>
       <SEO title={product.title} description={product.description} />
-      <Container>
-        <TwoColumnGrid>
-          <GridLeft>
-            {product.images.map(image => (
-              <Img
-                fluid={image.localFile.childImageSharp.fluid}
-                key={image.id}
-                alt={product.title}
-              />
-            ))}
-          </GridLeft>
-          <GridRight>
-            <ProductTitle>{product.title}</ProductTitle>
-            <ProductDescription
-              dangerouslySetInnerHTML={{ __html: product.descriptionHtml }}
-            />
-            <ProductForm product={product} />
-          </GridRight>
-        </TwoColumnGrid>
-      </Container>
+      <div className='shop-item-template'>
+        <ShopItemHeader
+          product={product}
+          name={product.title}
+          price={product.priceRange.maxVariantPrice.amount}
+          content={product.description}
+          productHandle={product.handle}
+          featuredImage={product.images[1].localFile.childImageSharp.fluid}
+        />
+        {/* {shop.frontmatter.carouselImgOne
+                    ? 
+                    <ShopItemCarousel
+                        carImageOne={shop.frontmatter.carouselImgOne.childImageSharp.fluid}
+                        carImageTwo={shop.frontmatter.carouselImgTwo.childImageSharp.fluid}
+                        carImageThree={shop.frontmatter.carouselImgThree.childImageSharp.fluid}
+                        carImageFour={shop.frontmatter.carouselImgFour.childImageSharp.fluid}
+                        carImageFive={shop.frontmatter.carouselImgFive.childImageSharp.fluid}
+                    />
+                    : null
+                } */}
+      </div>
     </>
   )
 }

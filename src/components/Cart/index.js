@@ -3,6 +3,9 @@ import React, { useContext } from 'react'
 import StoreContext from '~/context/StoreContext'
 import LineItem from './LineItem'
 
+// Styles
+import './CartComp.styles.scss';
+
 const Cart = () => {
   const {
     store: { checkout },
@@ -17,23 +20,21 @@ const Cart = () => {
   ))
 
   return (
-    <div>
+    <div className='cart-items-container'>
+      <h2>Your Items</h2>
       {lineItems}
-      <h2>Subtotal</h2>
-      <p>$ {checkout.subtotalPrice}</p>
-      <br />
-      <h2>Taxes</h2>
-      <p>$ {checkout.totalTax}</p>
-      <br />
-      <h2>Total</h2>
-      <p>$ {checkout.totalPrice}</p>
-      <br />
-      <button
-        onClick={handleCheckout}
-        disabled={checkout.lineItems.length === 0}
-      >
-        Check out
+      <div className='totals'>
+        <h2>Total</h2>
+        <p>€ {checkout.totalPrice}</p>
+        <br />
+        <button
+          onClick={handleCheckout}
+          disabled={checkout.lineItems.length === 0}
+          className='cta'
+        >
+          Check out
       </button>
+      </div>
     </div>
   )
 }

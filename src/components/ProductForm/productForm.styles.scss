@@ -1,0 +1,24 @@
+@import '../../common.styles.scss';
+
+.product-form{
+
+    label{
+        font-family: 'proxima-nova', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        color: $gj-grey;
+    }
+
+    input{
+        border: none;
+        border-bottom: 1px solid $gj-blue;
+        text-align: left;
+        width: 80px;
+        padding: 2px;
+        box-sizing: border-box;
+        font-family: 'proxima-nova', sans-serif;
+        font-weight: 600;
+        color: $gj-grey;
+        margin-left: 10px;
+    }
+}

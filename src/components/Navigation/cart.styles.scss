@@ -1,0 +1,28 @@
+@import '../../common.styles.scss';
+
+
+.cart-icon{
+    position: relative;
+
+    .cart{
+        width: auto;
+        height: 22px;
+        display: block;
+        position: relative;
+    }
+    
+    .cart-quantity{
+        position: absolute;
+        display: block;
+        z-index: 100;
+        top: 7px;
+        font-size: 10px;
+        font-family: 'proxima-nova', sans-serif;
+        color: $gj-grey;
+        font-weight: 600;
+        width: 100%;
+        text-align: center;
+        left: 1px;
+    }
+    
+}

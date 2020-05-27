@@ -1,0 +1,67 @@
+@import '../../../common.styles.scss';
+
+.line-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0px;
+    border-bottom: 1px solid $gj-blue;
+
+    h2{
+        text-align: center;
+        margin: 5px 0px;
+        font-size: 16px;
+    }
+
+    img{
+        width: 100%;
+    }
+
+    p{
+        margin: 0px;
+    }
+
+    .cta{
+        padding: 5px;
+        font-size: 12px;
+        margin: 20px auto;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .line-items{
+        flex-direction: row;
+
+        img{
+            width: 100px;
+        }
+
+        h2, p{
+            width: calc(100% / 4 - 20px);
+            text-align: left;
+            margin: 0px 20px 0px 0px;
+        }
+
+        .cta{
+            margin: 0px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1366px){
+    .line-items{
+        
+        img{
+            width: 150px;
+        }
+
+        h2, p, .cta{
+            font-size: 18px;
+        }
+
+        .cta{
+            padding: 10px 20px;
+        }
+    }
+}

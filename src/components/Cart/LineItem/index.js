@@ -2,7 +2,9 @@ import React, { useContext } from 'react'
 import { Link } from 'gatsby'
 
 import StoreContext from '~/context/StoreContext'
-import { Wrapper } from './styles'
+
+// Styles
+import './lineItems.styles.scss';
 
 const LineItem = props => {
   const { item } = props
@@ -11,39 +13,27 @@ const LineItem = props => {
     store: { client, checkout },
   } = useContext(StoreContext)
 
-  const variantImage = item.variant.image ? (
-    <img
-      src={item.variant.image.src}
-      alt={`${item.title} product shot`}
-      height="60px"
-    />
-  ) : null
-
-  const selectedOptions = item.variant.selectedOptions
-    ? item.variant.selectedOptions.map(
-        option => `${option.name}: ${option.value} `
-      )
-    : null
-
   const handleRemove = () => {
     removeLineItem(client, checkout.id, item.id)
   }
 
   return (
-    <Wrapper>
+    <div className='line-items'>
       {console.log(item)}
       <Link to={`/product/${item.variant.product.handle}/`}>
-        {variantImage}
+        <img
+          src={item.variant.image.src}
+          alt={`${item.title} product shot`}
+        />
       </Link>
-      <p>
+      <h2>
         {item.title}
         {`  `}
         {item.variant.title === !'Default Title' ? item.variant.title : ''}
-      </p>
-      {selectedOptions}
-      {item.quantity}
-      <button onClick={handleRemove}>Remove</button>
-    </Wrapper>
+      </h2>
+      <p>Quantity: {item.quantity}</p>
+      <button onClick={handleRemove} className='cta cta-beige'>Remove</button>
+    </div>
   )
 }
 

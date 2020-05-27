@@ -1,0 +1,51 @@
+@import '../../common.styles.scss';
+
+.side-text{
+    position: absolute;
+    transform: rotate(270deg);
+    top: 100px;
+    left: -170px;
+    z-index: 100;
+
+    p{
+        font-family: 'Time Land', sans-serif;
+        font-size: 140px;
+        line-height: 0px;
+        color: $gj-pink;
+        width: 400px;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .side-text{
+        top: 100px;
+
+        p{
+            font-size: 200px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1366px){
+    .side-text{
+        top: 40px;
+        left: -170px;
+
+        p{
+            font-size: 300px;
+            width: 500px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1920px){
+    .side-text{
+        top: 80px;
+        left: -230px;
+
+        p{
+            font-size: 350px;
+            width: 650px;
+        }
+    }
+}

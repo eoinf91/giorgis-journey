@@ -1,0 +1,150 @@
+@import '../../common.styles.scss';
+
+.lightroom-feature{
+
+    .comparer{
+        display: flex;
+        flex-direction: row;
+
+        .gatsby-image-wrapper{
+            width: 100%;
+        }
+
+        .compare-item{
+            width: 50%;
+            height: 300px;
+            position: relative;
+            background-color: $gj-pink;
+            padding: 20px;
+            box-sizing: border-box;
+
+            &.before{
+                
+                &:after{
+                    content: '';
+                    border-right: 1px solid $gj-blue;
+                    width: 100%;
+                    height: 90%;
+                    position: absolute;
+                    right: 0px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                p{
+                    left: 15px;
+                    top: 20px;
+                }
+            }
+
+            &.after{
+
+                p{
+                    right: 20px;
+                    bottom: 30px;
+                }
+            }
+
+            p{
+                font-family: 'Time Land', sans-serif;
+                font-size: 50px;
+                position: absolute;
+                margin: 0px;
+                color: $gj-blue;
+            }
+        }
+    }
+
+    .content{
+        background-color: $gj-blue;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;
+
+        h3{
+            font-family: 'Time Land', sans-serif;
+            font-size: 180px;
+            line-height: 100px;
+            text-transform: none;
+            margin: 0px 0px 100px;
+            color: $gj-pink;
+            text-align: center;
+        }
+
+        a{
+            text-align: center;
+        }
+
+        p{
+            color: $gj-pink;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .lightroom-feature{
+        display: flex;
+        flex-direction: column;
+
+        .comparer{
+            width: 100%;
+            height: 100%;
+            margin: auto;
+
+            .compare-item{
+                height: 100%;
+            }
+        }
+
+        .content{
+            width: 100%;
+            height: 100%;
+            margin: auto;
+        }
+    }
+}
+
+@media only screen and (min-width: 1366px){
+    .lightroom-feature{
+        align-items: center;
+        height: 600px;
+        flex-direction: row;
+        
+        .comparer{
+            width: 60%;
+
+            .compare-item{
+                
+                p{
+                    font-size: 75px;
+                }
+
+                &.after{
+
+                    p{
+                        bottom: 50px;
+                        right: 30px;
+                    }
+                }
+            }
+        }
+
+        .content{
+            width: 40%;
+            text-align: left;
+            padding: 20px 100px;
+            box-sizing: border-box;
+
+            h3{
+                font-size: 250px;
+                margin-top: 60px;
+                text-align: left;
+            }
+
+            p{
+                width: 350px;
+                margin-top: 80px;
+            }
+        }
+    }
+}

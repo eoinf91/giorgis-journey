@@ -1,0 +1,29 @@
+@import '../../common.styles.scss';
+
+.destinations{
+    padding: 20px;
+    box-sizing: border-box;
+
+    h2{
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .destinations{
+
+        .destination-list{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media only screen and (min-width: 1366px){
+    .destinations{
+        width: 1300px;
+        margin: auto;
+    }
+}

@@ -1,0 +1,62 @@
+@import '../../../common.styles.scss';
+
+.insta{
+    position: relative;
+    top: -50px;
+
+    h3{
+        font-family: 'Time Land', sans-serif;
+        font-weight: normal;
+        color: $gj-grey;
+        text-transform: none;
+        font-size: 150px;
+        position: relative;
+        text-align: center;
+        top: 50px;
+        margin: 0px;
+    }
+    
+    iframe{
+        height: 280px;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .insta{
+
+        h3{
+            font-size: 200px;
+            top: 60px;
+        }
+
+        iframe{
+            height: 560px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1366px){
+    .insta{
+        padding: 20px 120px;
+        box-sizing: border-box;
+
+        h3{
+            font-size: 250px;
+            top: 30px;
+            line-height: 200px;
+        }
+
+        iframe{
+            height: 250px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1366px){
+    .insta{
+
+        iframe{
+            height: 350px;
+        }
+    }
+}

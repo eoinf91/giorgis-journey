@@ -1,0 +1,85 @@
+@import '../../common.styles.scss';
+
+header{
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+
+    svg{
+        width: 40px;
+        display: block;
+
+        .st1{
+            fill: $gj-pink;
+        }
+    }
+
+    nav{
+        width: calc(100% - 120px);
+
+        ul{
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+    
+            li{
+                font-family: 'Proxima Nova', sans-serif;
+                font-weight: 400;
+                text-transform: uppercase;
+                display: block;
+                font-size: 14px;
+                
+                a{
+                    color: $gj-grey;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px){
+    header{
+        padding: 30px;
+
+        svg{
+            width: 50px;
+
+            .st1{
+                fill: $gj-pink;
+            }
+        }
+
+        nav{
+            width: 250px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1366px){
+    header{
+        padding: 25px 30px;
+
+        nav{
+            width: 350px;
+
+            ul{
+
+                li{
+                    font-size: 18px;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+    }
+}

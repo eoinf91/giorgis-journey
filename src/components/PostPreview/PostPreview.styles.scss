@@ -1,0 +1,50 @@
+@import '../../common.styles.scss';
+
+.post-preview{
+    margin: 0px 0px 30px;
+
+    .post-preview-image{
+        width: 85%;
+        height: 450px;
+        background-color: $gj-pink;
+    }
+
+    .post-preview-content{
+        text-align: left;
+        padding: 0px 20px;
+        box-sizing: border-box;
+
+        .cta{
+            margin: 10px 0px;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .post-preview{
+        width: calc(100% / 2 - 10px);
+
+        .post-preview-image{
+            width: 90%;
+        }
+
+        .post-preview-content{
+            margin: 0px 40px 0px 0px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1366px){
+    .post-preview{
+        width: calc(100% / 4 - 20px);
+        margin: 0px;
+
+        .post-preview-image{
+            width: 100%;
+        }
+
+        .post-preview-content{
+            margin: 0px;
+        }
+    }
+}

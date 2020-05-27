@@ -1,0 +1,118 @@
+@import '../../common.styles.scss';
+
+.featured-posts{
+    width: 100%;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 0;
+
+    .featured-posts-bg{
+        position: absolute;
+        top: -100px;
+        background: url('../../Assets/leaves_bg.svg');
+        background-repeat: repeat-y;
+        background-size: contain;
+        background-position: top;
+        width: 100%;
+        height: 100%;
+        z-index: -100;
+        left: 0px;
+    }
+
+    h2{
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .flex-container{
+        position: relative;
+        overflow-x: hidden;
+    }
+
+    .side-text{
+        transform: rotate(90deg);
+        right: -190px;
+        left: auto;
+        top: 130px;
+        text-align: left;
+
+        p{
+            color: $gj-grey;
+            font-size: 120px;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .featured-posts{
+        padding: 120px 40px 20px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: -80px;
+
+        .flex-container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+}
+
+@media only screen and (min-width: 1366px){
+    .featured-posts{
+        padding: 20px 40px 0px;
+        // overflow-x: hidden;
+
+        .overflow-container{
+            overflow-x: hidden;
+        }
+
+        .featured-posts-bg{
+            background-position: -60px -10px;
+            background-size: contain;
+            height: 120%;
+            background-repeat: no-repeat;
+        }
+
+        .flex-container{
+            width: 87%;
+            max-width: 1400px;
+            margin: 0px auto;
+            position: relative;
+            overflow-x: visible;
+        }
+
+        .side-text{
+            top: 50px;
+            right: -220px;
+            width: 400px;
+
+            p{
+                font-size: 200px;
+                color: $gj-grey;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1920px){
+    .featured-posts{
+
+        .overflow-container{
+            height: 800px;
+        }
+
+        .featured-posts-bg{
+            background-position: 0px -70px;
+            background-size: contain;
+        }
+
+        .side-text{
+            width: 300px;
+            top: 0px;
+            right: -170px;
+        }
+    }
+}

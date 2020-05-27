@@ -1,0 +1,40 @@
+@import '../../common.styles.scss';
+
+.large-para{
+    padding: 20px 40px;
+    box-sizing: border-box;
+
+    p{
+        font-family: kepler-std-display, sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        margin: 0px 0px 20px;
+        position: relative;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .large-para{
+        padding: 20px 60px;
+
+        p{
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1366px){
+    .large-para{
+        width: 800px;
+        margin: auto;
+        padding: 80px 0px;
+
+        p{
+            font-size: 20px;
+            line-height: 26px;
+        }
+    }
+}

@@ -1,0 +1,99 @@
+@import '../../common.styles.scss';
+
+.subscription{
+    background-color: $gj-blue;
+    margin-top: 20px;
+    padding: 60px 20px 20px;
+    box-sizing: border-box;
+    position: relative;
+
+    &:before{
+        content: url('../../Assets/stamp.svg');
+        position: absolute;
+        top: -95px;
+        right: -40px;
+        transform: scale(0.5);
+    }
+
+    h2{
+        font-family: 'Time Land', sans-serif;
+        font-size: 150px;
+        line-height: 100px;
+        font-weight: normal;
+        text-transform: none;
+        color: $gj-pink;
+        margin: 0px 10px 80px;
+    }
+
+    .subscription-form{
+
+        p{
+            color: $gj-pink;
+            margin: 0px 0px 40px;
+        }
+
+        form{
+
+            input[type=text],
+            input[type=email]{
+                display: block;
+                width: 100%;
+                margin: 0px 0px 20px;
+                padding: 10px;
+                box-sizing: border-box;
+                background: transparent;
+                border: none;
+                border-bottom: 1px solid $gj-pink;
+                font-family: proxima-nova, sans-serif;
+                font-weight: 500;
+                color: $gj-pink;
+                font-size: 16px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .subscription{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        padding: 100px 40px;
+        align-content: flex-start;
+
+        h2{
+            width: calc(60% - 20px);
+            margin: 0px;
+        }
+
+        .subscription-form{
+            width: calc(40% - 0px);
+        }
+    }
+}
+
+@media only screen and (min-width: 1366px){
+    .subscription{
+        padding: 100px;
+        justify-content: space-around;
+
+        &:before{
+            right: 60px;
+            transform: scale(0.7);
+        }
+
+        h2{
+            font-size: 200px;
+            width: 500px;
+            margin: 0px auto;
+        }
+        
+        .subscription-form{
+            max-width: 450px;
+            margin: auto;
+        }
+    }
+}

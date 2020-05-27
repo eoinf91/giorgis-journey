@@ -1,0 +1,106 @@
+@import '../../../common.styles.scss';
+
+.image-header{
+    position: relative;
+    z-index: 100;
+
+    .image-container{
+        background-color: $gj-blue;
+        width: 100%;
+        height: 50vh;
+        padding: 60px 20px 20px;
+        box-sizing: border-box;
+        margin-bottom: 80px;
+        position: relative;
+        z-index: 0;
+
+        .header-image{
+            width: 270px;
+            height: 300px;
+            background-color: $gj-brown;
+            position: absolute !important;
+            right: 20px;
+            top: 80px;
+        }
+    }
+
+    .image-header-content{
+        padding: 0px 20px 20px;
+        box-sizing: border-box;
+        text-align: left;
+        z-index: 1000;
+    }
+    
+    .map{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .image-header{
+
+        .image-container{
+
+            .header-image{
+                width: 400px;
+                height: 450px;
+                top: 130px;
+                left: 100px;
+            }
+        }
+
+        .image-header-content{
+            padding: 20px 100px;
+            box-sizing: border-box;
+        }
+    }
+}
+
+@media only screen and (min-width: 1366px){
+    .image-header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .image-container{
+            width: 35%;
+            height: 600px;
+
+            .header-image{
+                right: -100px;
+                left: auto;
+                top: auto;
+                bottom: 40px;
+            }
+        }
+
+        .image-header-content{
+            width: 55%;
+            padding: 0px 100px 0px 100px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1920px){
+    .image-header{
+        
+        .image-container{
+            height: 900px;
+
+            .header-image{
+                width: 600px;
+                height: 700px;
+                right: -140px;
+                bottom: 60px;
+            }
+        }
+
+        .image-header-content{
+
+            h1, p{
+                width: 600px;
+            }
+        }
+    }
+}

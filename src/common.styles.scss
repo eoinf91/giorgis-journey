@@ -1,0 +1,123 @@
+// Colors
+$gj-pink: #F9EFED;
+$gj-blue: #AFC2D2;
+$gj-brown: #E4DAD1;
+$gj-grey: #707070;
+$gj-black: #000000;
+$gj-white: #ffffff;
+
+h1{
+    margin: 0px 0px 20px;
+    font-family: kepler-std-display, serif;
+    font-weight: 600;
+    font-style: normal;
+    color: $gj-grey;
+    font-size: 46px;
+
+    .blue{
+        color: $gj-blue;
+        letter-spacing: 1px;
+    }
+}
+
+h2{
+    font-family: kepler-std-display, serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $gj-grey;
+    letter-spacing: 1px;
+    margin: 30px 0px 20px;
+}
+
+h3{
+    font-family: proxima-nova, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $gj-grey;
+    margin: 15px 0px 15px;
+    
+    a{
+        color: $gj-blue;
+    }
+}
+
+p{
+    font-size: 14px;
+    font-family: proxima-nova, sans-serif;
+    font-weight: 400;
+    color: $gj-grey;
+    line-height: 20px;
+    position: relative;
+    
+    .author{
+        font-family: 'Time Land', sans-serif;
+        color: #AFC2D2;
+        display: block;
+        position: absolute;
+        bottom: -15px;
+        right: 40px;
+        font-size: 100px;
+        z-index: -1;
+    }
+
+    a{
+        color: $gj-blue;
+    }
+}
+
+.cta{
+    display: inline-block;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background-color: $gj-blue;
+    text-decoration: none;
+    color: $gj-white;
+    font-family: proxima-nova, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    transition: all 1s ease;
+    border: 1px solid $gj-blue;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $gj-white;
+        color: $gj-blue;
+        border: 1px solid $gj-blue;
+    }
+
+    &.cta-beige{
+        background-color: $gj-pink;
+        border: 1px solid $gj-pink;
+        color: $gj-blue;
+
+        &:hover{
+            background-color: $gj-blue;
+            border: 1px solid $gj-pink;
+            color: $gj-pink;
+        }
+    }
+}
+
+@media only screen and (min-width: 1366px){
+    h2{
+        font-size: 28px;
+    }
+}
+
+@media only screen and (min-width: 1920px){
+    h1{
+        font-size: 80px;
+        line-height: 80px;
+    }
+
+    p{
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .cta{
+        font-size: 18px;
+    }
+}

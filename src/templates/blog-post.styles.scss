@@ -1,0 +1,121 @@
+@import '../common.styles.scss';
+
+.posts{
+    .post-content{
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: left;
+        border-bottom: 1px solid $gj-grey;
+
+        .post-text{
+
+            h3{
+                font-family: kepler-std-display, serif;
+                font-weight: 400;
+                font-size: 26px;
+                text-transform: none;
+                margin: 0px 0px 20px;
+            }
+    
+            h4{
+                font-family: proxima-nova, sans-serif;
+                font-weight: 700;
+                color: $gj-grey;
+                margin: 30px 0px 10px;
+            }
+        }
+
+        .post-images{
+            padding: 0px 20px;
+            box-sizing: border-box;
+    
+            .image{
+                width: 100%;
+                height: 330px;
+                background-color: $gj-pink;
+            }
+        }
+
+        .gatsby-resp-image-wrapper{
+            margin-bottom: 10px !important;
+        }
+    }
+
+    .featured-posts{
+        position: relative;
+        top: 0px;
+        
+        .featured-posts-bg{
+            display: none;
+        }
+
+        .side-text{
+            display: none;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .posts{
+
+        .post-content{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 20px 100px;
+
+            .post-text{
+                width: 55%;
+            }
+
+            .post-images{
+                width: 40%;
+                padding: 0px;
+                
+                .image{
+                    margin: 0px 0px 20px;
+                    height: 280px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1366px){
+    .posts{
+
+        .post-content{
+            width: 87%;
+            max-width: 1400px;
+            margin: 0px auto;
+            padding: 0px 0px 50px;
+
+            .post-text{
+                width: 55%;
+            }
+
+            .post-images{
+                width: 30%;
+
+                .image{
+                    height: 350px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1920px){
+    .posts{
+
+        .post-content{
+
+            .post-images{
+
+                .image{
+                    height: 450px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,79 @@
+@import '../../common.styles.scss';
+
+.fancy-title{
+    width: 100%;
+    position: relative;
+
+    h1{
+        font-family: 'Time Land', sans-serif;
+        font-weight: normal;
+        color: $gj-blue;
+        font-size: 150px;
+        width: 200px;
+        margin: 0px auto 20px;
+        line-height: 100px;
+        padding-top: 70px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    img{
+        height: 80px;
+        position: absolute;
+        top: 50%;
+
+        &:first-of-type{
+            left: 0px;
+        }
+
+        &:last-of-type{
+            right: 0px;
+            height: 90px;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .fancy-title{
+
+        h1{
+            width: 80%;
+            padding-top: 120px;
+        }
+
+        img{
+            bottom: -30px;
+            top: auto;
+
+            &:first-of-type{
+                height: 120px;
+            }
+
+            &:last-of-type{
+                height: 150px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1366px){
+    .fancy-title{
+
+        h1{
+            font-size: 250px;
+            margin-bottom: 100px;
+        }
+
+        img{
+            bottom: -100px;
+
+            &:first-of-type{
+                height: 170px;
+            }
+
+            &:last-of-type{
+                height: 200px;
+            }
+        }
+    }
+}

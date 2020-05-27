@@ -1,0 +1,86 @@
+@import '../../common.styles.scss';
+
+.quote{
+    padding: 50px 20px;
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+
+    img{
+        display: block;
+        width: 120px;
+        margin: 0px auto;
+
+        &:nth-of-type(even){
+            transform: rotate(180deg);
+        }
+    }
+
+    p{
+        font-family: kepler-std-display;
+        font-weight: 400;
+        color: $gj-grey;
+        font-size: 38px;
+        line-height: 42px;
+        position: relative;
+
+        .author{
+            font-family: 'Time Land', sans-serif;
+            color: $gj-blue;
+            display: block;
+            position: absolute;
+            bottom: -15px;
+            right: 40px;
+            font-size: 100px;
+            z-index: -1;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .quote{
+
+        img{
+            width: 150px;
+        }
+
+        p{
+            width: 600px;
+            margin: 30px auto;
+
+            &:last-of-type{
+
+                &:after{
+                    font-size: 150px;
+                    right: 20px;
+                    bottom: -20px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1366px){
+    .quote{
+
+        img{
+            width: 250px;
+        }
+
+        p{
+            width: 800px;
+            margin: 60px auto;
+            font-size: 52px;
+            line-height: 56px;
+
+            &:last-of-type{
+
+                &:after{
+                    font-size: 200px;
+                    right: 0px;
+                    bottom: -30px;
+                }
+            }
+        }
+    }
+}
