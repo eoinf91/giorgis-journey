@@ -46,6 +46,8 @@ const Subscription = () => {
                         value={formik.values.email}
                         aria-label="Enter email address"
                     />
+                    <p>By signing up you are giving permission to Giorg's Journey to contact you with latest posts and product information.</p>
+                    <p>We use Mailchimp as our marketing platform. By clicking "Sign Up" you acknowledge that your information will be transferred to Mailchimp for processing. <a href="https://mailchimp.com/legal/" target="_blank" rel="noopener nofollow">Learn more about Mailchimp's privacy practices here.</a></p>
                     <button type="submit" className='cta cta-beige'>Sign Up</button>
                 </form>
             </div>

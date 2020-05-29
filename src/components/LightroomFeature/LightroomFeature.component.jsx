@@ -10,7 +10,7 @@ const LightroomFeature = () => {
         <StaticQuery
             query={graphql`
                 query presetFeature {
-                    imageSharp(fluid: {originalName: {eq: "preset_feature.jpg"}}) {
+                    imageSharp(fluid: {originalName: {eq: "lightroom_feature.jpg"}}) {
                         fluid {
                             originalName
                             ...GatsbyImageSharpFluid

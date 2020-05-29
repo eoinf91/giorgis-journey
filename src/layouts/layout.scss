@@ -1,0 +1,40 @@
+@import '../common.styles.scss';
+@font-face {
+    font-family: 'Time Land';
+    src: local('Tiime_Land-Regular'), url('../Assets/fonts//Tiime_Land-Regular.ttf');
+}
+
+body{ 
+    margin: 0px;
+}
+
+.CookieConsent{
+    background-color: $gj-grey !important;
+
+    div{
+        font-family: 'proxima-nova', sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+        color: $gj-pink;
+
+        button{
+            background-color: $gj-blue !important;
+            border: 1px solid $gj-blue !important;
+            color: $gj-white !important;
+            padding: 10px 20px !important;
+            box-sizing: border-box !important;
+            font-family: 'proxima-nova', sans-serif;
+            font-weight: 400;
+            font-size: 12px;
+            letter-spacing: 1px;
+            transition: all 1s ease;
+
+            &:hover{
+                background-color: $gj-grey !important;
+                color: $gj-blue !important;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,30 @@
+@import '../common.styles.scss';
+
+.terms{
+    padding: 100px 20px 20px;
+    box-sizing: border-box;
+
+    h4{
+        font-family: kepler-std-display, serif;
+        font-weight: 700;
+        font-size: 14px;
+        margin: 30px 0px 5px;
+        color: $gj-grey;
+        text-transform: none;
+    }
+
+    p{
+        margin: 5px 0px;
+    }
+}
+
+@media only screen and (min-width: 1366px){
+    .terms{
+        width: 1000px;
+        margin: 0px auto;
+
+        h4{
+            font-size: 18px;
+        }
+    }
+}

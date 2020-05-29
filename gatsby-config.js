@@ -6,9 +6,9 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Shopify Starter`,
-    description: `Kick off your next, ecommerce experience with this Gatsby starter. This starter ships with credentials to a shopify demo store so you can try it out immediately.`,
-    author: `@alexanderhorl`,
+    title: `Giorgi's Journey`,
+    description: `Follow my story as I write about the destinations I have visited`,
+    author: `@giorgisjourney`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -74,13 +74,31 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `giorgis-journey`,
-        short_name: `gj-blog`,
+        name: `GiorgisJourney`,
+        short_name: `GiorgisJourney`,
         start_url: `/`,
         background_color: `#AFC2D2`,
         theme_color: `#AFC2D2`,
-        display: `minimal-ui`,
-        icon: `./src/images/ag-favicon.png`, // This path is relative to the root of the site.
+        display: `standalone`,
+        icon: `src/images/icon.png`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-97655091-1",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-gdpr-cookies`,
+      options: {
+        googleAnalytics: {
+          trackingId: 'UA-97655091-1',
+          // Setting this parameter is optional
+          anonymize: true
+        },
+        // Defines the environments where the tracking should be available  - default is ["production"]
+        environments: ['production', 'development']
       },
     },
     {
