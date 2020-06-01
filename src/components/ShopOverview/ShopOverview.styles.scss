@@ -1,7 +1,13 @@
 @import '../../common.styles.scss';
 
 .shop-overview{
-    padding: 200px 40px 20px 40px;
+    padding: 100px 40px 20px 40px;
     box-sizing: border-box;
     position: relative;
+}
+
+@media only screen and (min-width: 768px){
+    .shop-overview{
+        padding: 200px 40px 20px 40px;
+    }
 }

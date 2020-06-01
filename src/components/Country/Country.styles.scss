@@ -60,6 +60,8 @@
     
             .post-preview-content{
                 width: 100%;
+                position: relative;
+                z-index: 1000;
             }
         }
 
