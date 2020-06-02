@@ -1,0 +1,71 @@
+@import '../../../common.styles.scss';
+
+
+.shop-item-carousel-comp{
+    position: relative;
+    
+    .shop-item-carousel-item{
+        width: 100%;
+        height: 250px;
+        background: $gj-blue;
+        position: relative;
+    }
+
+    .side-text{
+        transform: rotate(0deg);
+        left: auto;
+        right: 0px;
+        text-align: right;
+        top: 50px;
+
+        p{
+            color: $gj-grey;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .shop-item-carousel-comp{
+        width: 450px;
+        margin: auto;
+
+        .shop-item-carousel-item{
+            height: 350px;
+        }
+
+        .side-text{
+            top: 100px;
+            right: -100px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1366px){
+    .shop-item-carousel-comp{
+        width: 650px;
+        margin-bottom: 150px;
+
+        .shop-item-carousel-item{
+            height: 450px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1920px){
+    .shop-item-carousel-comp{
+        width: 900px;
+        margin-bottom: 250px;
+
+        .shop-item-carousel-item{
+            height: 600px;
+        }
+
+        .side-text{
+            top: 220px;
+
+            p{
+                font-size: 300px;
+            }
+        }
+    }
+}

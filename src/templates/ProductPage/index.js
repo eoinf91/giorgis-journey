@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import ShopItemHeader from '../../components/ShopItemHeader/ShopItemHeader.component';
+import ShopItemCarousel from '../../components/ShopItemCarousel/ShopItemCarousel.component';
 import SEO from '~/components/seo'
 
 // Styles
@@ -9,6 +10,7 @@ import './shop-item.styles.scss';
 
 const ProductPage = ({ data }) => {
   const product = data.shopifyProduct
+  console.log(product.images)
   return (
     <>
       <SEO title={product.title} description={product.description} />
@@ -21,17 +23,16 @@ const ProductPage = ({ data }) => {
           productHandle={product.handle}
           featuredImage={product.images[1].localFile.childImageSharp.fluid}
         />
-        {/* {shop.frontmatter.carouselImgOne
-                    ? 
-                    <ShopItemCarousel
-                        carImageOne={shop.frontmatter.carouselImgOne.childImageSharp.fluid}
-                        carImageTwo={shop.frontmatter.carouselImgTwo.childImageSharp.fluid}
-                        carImageThree={shop.frontmatter.carouselImgThree.childImageSharp.fluid}
-                        carImageFour={shop.frontmatter.carouselImgFour.childImageSharp.fluid}
-                        carImageFive={shop.frontmatter.carouselImgFive.childImageSharp.fluid}
-                    />
-                    : null
-                } */}
+        {product.images.length > 3
+          ? <ShopItemCarousel
+            carImageOne={product.images[2].localFile.childImageSharp.fluid}
+            carImageTwo={product.images[3].localFile.childImageSharp.fluid}
+            carImageThree={product.images[4].localFile.childImageSharp.fluid}
+            carImageFour={product.images[5].localFile.childImageSharp.fluid}
+            carImageFive={product.images[6].localFile.childImageSharp.fluid}
+          />
+          : null
+        }
       </div>
     </>
   )

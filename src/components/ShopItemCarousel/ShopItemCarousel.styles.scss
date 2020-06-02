@@ -1,0 +1,223 @@
+@import '../../common.styles.scss';
+
+.shop-item-carousel{
+    margin-top: 100px;
+    position: relative;
+
+    h2{
+        text-align: center;
+    }
+
+    button{
+        border: none;
+        cursor: pointer;
+        background: none;
+        position: relative;
+        z-index: 1000;
+
+        &:focus{
+            display: none;
+        }
+
+        &:first-of-type{
+            left: 00px;
+        }
+
+        &:last-of-type{
+            right: 30px;
+        }
+
+        &:disabled{
+            opacity: 0;
+        }
+
+        &:hover{
+            background-color: transparent;
+        }
+
+        img{
+            transition: all 0.5s ease;
+
+            &:hover{
+                opacity: 0.5;
+            }
+
+            &.flipped{
+                transform: rotate(180deg);
+            }
+        }
+
+        .sc-AxhUy.knuRUX.rec.rec-carousel{
+            height: 300px !important;
+        }
+    }
+
+    .shop-item-carousel-carousel{
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        width: 100%;
+        padding: 0px;
+        box-sizing: border-box;
+        height: 270px;
+
+        .carousel-item{
+            position: relative;
+        }
+
+        p{
+            width: 250px;
+            text-align: right;
+
+            &.preset-name{
+                font-family: 'Time Land', sans-serif;
+                font-size: 100px;
+                line-height: 0px;
+                position: absolute;
+                top: 100px;
+                left: 30px;
+                color: $gj-black;
+                z-index: 100;
+            }
+        }
+
+        .rec-carousel{
+            height: 760px !important;
+        }
+
+        .post-preview{
+            margin: 0px 10px 40px 0px;
+            width: 100%;
+    
+            .post-preview-image{
+                width: 100%;
+            }
+    
+            .post-preview-content{
+                width: 100%;
+            }
+        }
+    }
+
+    img{
+        position: absolute;
+        top: 50%;
+        width: 30px;
+        z-index: 1;
+
+        &.left{
+            left: -5px;
+        }
+
+        &.right{
+            right: -5px;
+            transform: rotate(180deg);
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .shop-item-carousel{
+
+        .shop-item-carousel-carousel{
+            height: 550px;
+
+            button{
+                
+                &:first-of-type{
+                    left: 00px;
+                }
+        
+                &:last-of-type{
+                    right: 30px;
+                }
+            }
+
+            .carousel-item{
+                width: 100%;
+                height: 550px;
+            }
+
+            p{
+
+                &.preset-name{
+                    top: 390px;
+                    right: 20px;
+                    left: auto;
+                }
+            }
+        }
+        
+        img{
+
+            &.left{
+                left: 80px;
+            }
+
+            &.right{
+                right: 80px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .shop-item-carousel{
+
+        .shop-item-carousel-carousel{
+            width: 800px;
+            margin: auto;
+            height: 600px;
+
+            button{
+                
+                &:first-of-type{
+                    left: 0px;
+                }
+        
+                &:last-of-type{
+                    right: 40px;
+                }
+            }
+
+            .carousel-item{
+                height: 600px;
+
+                p{
+
+                    &.preset-name{
+                        top: 440px;
+                    }
+                }
+            }
+        }
+        
+        img{
+            width: 40px;
+
+            &.left{
+                left: 180px;
+            }
+
+            &.right{
+                right: 180px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .shop-item-carousel{
+        
+        img{
+
+            &.left{
+                left: 280px;
+            }
+
+            &.right{
+                right: 280px;
+            }
+        }
+    }
+}
