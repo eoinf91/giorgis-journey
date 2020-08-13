@@ -1,13 +1,14 @@
-const path = require('path')
+const path = require("path");
 
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`
-})
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
 
 module.exports = {
   siteMetadata: {
     title: `Giorgi's Journey`,
-    description: `Follow my story as I write about the destinations I have visited`,
+    description:
+      `Follow my story as I write about the destinations I have visited`,
     author: `@giorgisjourney`,
   },
   plugins: [
@@ -24,21 +25,21 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `posts`,
-        path: `${__dirname}/src/markdown-pages/blog/posts`
-      }
+        path: `${__dirname}/src/markdown-pages/blog/posts`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `destinations`,
-        path: `${__dirname}/src/markdown-pages/blog/destinations`
+        path: `${__dirname}/src/markdown-pages/blog/destinations`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
-        path: `${__dirname}/src/markdown-pages/pages`
+        path: `${__dirname}/src/markdown-pages/pages`,
       },
     },
     `gatsby-plugin-styled-components`,
@@ -65,9 +66,10 @@ module.exports = {
     `gatsby-plugin-lodash`,
     `gatsby-plugin-layout`,
     {
-      resolve: 'gatsby-plugin-mailchimp',
+      resolve: "gatsby-plugin-mailchimp",
       options: {
-        endpoint: 'https://giorgisjourney.us12.list-manage.com/subscribe/post?u=f9436b56aac730e17bf51a3ad&amp;id=bbd61706a4', // string; add your MC list endpoint here; see instructions below
+        endpoint:
+          "https://giorgisjourney.us12.list-manage.com/subscribe/post?u=f9436b56aac730e17bf51a3ad&amp;id=bbd61706a4", // string; add your MC list endpoint here; see instructions below
         timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
       },
     },
@@ -93,41 +95,18 @@ module.exports = {
       resolve: `gatsby-plugin-gdpr-cookies`,
       options: {
         googleAnalytics: {
-          trackingId: 'UA-97655091-1',
+          trackingId: "UA-97655091-1",
           // Setting this parameter is optional
-          anonymize: true
+          anonymize: true,
         },
         // Defines the environments where the tracking should be available  - default is ["production"]
-        environments: ['production', 'development']
+        environments: ["production", "development"],
       },
     },
     {
-      resolve: `gatsby-source-shopify`,
+      resolve: "gatsby-plugin-root-import",
       options: {
-        // The domain name of your Shopify shop. This is required.
-        // Example: 'gatsby-source-shopify-test-shop' if your Shopify address is
-        // 'gatsby-source-shopify-test-shop.myshopify.com'.
-        shopName: process.env.SHOP_NAME,
-
-        // An API access token to your Shopify shop. This is required.
-        // You can generate an access token in the "Manage private apps" section
-        // of your shop's Apps settings. In the Storefront API section, be sure
-        // to select "Allow this app to access your storefront data using the
-        // Storefront API".
-        // See: https://help.shopify.com/api/custom-storefronts/storefront-api/getting-started#authentication
-        accessToken: process.env.SHOPIFY_ACCESS_TOKEN,
-
-        // Set verbose to true to display a verbose output on `npm run develop`
-        // or `npm run build`. This prints which nodes are being fetched and how
-        // much time was required to fetch and process the data.
-        // Defaults to true.
-        verbose: true,
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-root-import',
-      options: {
-        '~': path.join(__dirname, 'src/'),
+        "~": path.join(__dirname, "src/"),
       },
     },
     {
@@ -142,4 +121,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
   ],
-}
+};

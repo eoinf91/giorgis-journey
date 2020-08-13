@@ -1,41 +1,42 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from "react";
+import { graphql } from "gatsby";
 
 // Components
-import SEO from "../components/seo"
-import ImageHeader from '../components/Header/ImageHeader/ImageHeader.component';
-import FeaturedPosts from '../components/FeaturedPosts/FeaturedPosts.component';
-import Subscription from '../components/Subscription/Subscription.component';
-import Quote from '../components/Quote/Quote.component';
-import LightroomFeature from '../components/LightroomFeature/LightroomFeature.component';
+import SEO from "../components/seo";
+import ImageHeader from "../components/Header/ImageHeader/ImageHeader.component";
+import FeaturedPosts from "../components/FeaturedPosts/FeaturedPosts.component";
+import Subscription from "../components/Subscription/Subscription.component";
+import Quote from "../components/Quote/Quote.component";
+// import LightroomFeature from "../components/LightroomFeature/LightroomFeature.component";
 
 const IndexPage = ({ data }) => {
-  console.log(data)
-  let featuredImgFluid = data.markdownRemark.frontmatter.featuredImage.childImageSharp.fluid
+  console.log(data);
+  let featuredImgFluid =
+    data.markdownRemark.frontmatter.featuredImage.childImageSharp.fluid;
 
   return (
     <>
       <SEO title="Home" />
       <ImageHeader
-        sideTextContent={'Hey!'}
+        sideTextContent={"Hey!"}
         title={data.markdownRemark.frontmatter.title}
         copy={data.markdownRemark.html}
-        buttonCopy={'Learn More'}
-        urlPath={'/about'}
+        buttonCopy={"Learn More"}
+        urlPath={"/about"}
         image={featuredImgFluid}
       />
       <FeaturedPosts />
       <Subscription />
       <Quote
-        quote={'Be brave. Take risks. Nothing can substitute experience.'}
-        author={'Paulo Coelho'}
+        quote={"Be brave. Take risks. Nothing can substitute experience."}
+        author={"Paulo Coelho"}
       />
-      <LightroomFeature />
+      {/* <LightroomFeature /> */}
     </>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const query = graphql`
   query {
@@ -57,4 +58,4 @@ export const query = graphql`
       id
     }
   }
-`
+`;
